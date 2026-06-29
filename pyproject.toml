@@ -1,0 +1,18 @@
+[project]
+name = "zerodp"
+version = "0.1.0"
+description = "From-scratch DDP gradient bucketing and FSDP-style ZeRO-3 parameter sharding for PyTorch, built directly on torch.distributed collectives."
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
